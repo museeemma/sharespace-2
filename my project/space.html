@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage Spaces</title>
+    <link rel="stylesheet" href="space.css">
+</head>
+<body>
+    <header>
+        <h1>Find Storage Spaces</h1>
+    </header>
+    <div class="container">
+        <div class="storage-info">
+            <img src="store.jfif" alt="Storage Location">
+            <p>Location: [Name of Location]</p>
+            <p>Address: [Address of Location]</p>
+        </div>
+        <div class="booking-form">
+            <h2>Book Storage Space</h2>
+            <form action="#" method="post">
+                <label for="items">Items to Store:</label>
+                <textarea id="items" name="items" placeholder="List your items here"></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+        <div class="payment-calculation">
+            <h2>Payment Calculation</h2>
+            <p>Total Cost: $<span id="total-cost">0.00</span></p>
+            <button onclick="calculatePayment()">Calculate</button>
+        </div>
+    </div>
+
+    <script>
+        function calculatePayment() {
+            // Your payment calculation logic here
+            // Update the total cost in the span with id="total-cost"
+        }
+    </script>
+</body>
+</html>

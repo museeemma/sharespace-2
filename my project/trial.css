@@ -1,0 +1,12 @@
+.image-gallery {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .image-gallery {
+            position: relative;
+            overflow: hidden;
+            width: 300px; /* Adjust the container size as needed */
+            height: 200px;
+        }
+
+        .image-gallery img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .image-gallery:hover img {
+            transform: rotate(5deg); /* Rotate images on hover */
+        }
+
+        #next-btn {
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-gallery">
+        <img src="water dispenser.jpg" alt="Image 1">
+        <img src="fridge 2.jpg" alt="Image 2">
+        <!-- Add more images as needed -->
+    </div>
+    <button id="next-btn">Next</button>
+
+    <script>
+        const images = document.querySelectorAll('.image-gallery img');
+        const nextBtn = document.getElementById('next-btn');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.opacity = i === index ? 1 : 0;
+            });
+        }
+
+        function rotateImages() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        nextBtn.addEventListener('click', rotateImages);
+        showImage(currentIndex); // Show the first image initially
+    </script>
+</body>
+</html>
